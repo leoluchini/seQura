@@ -1,0 +1,149 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-thread_safety
+
+AllCops:
+  DisplayCopNames: false
+  NewCops: enable
+
+Layout/ExtraSpacing:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 90
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/ClassLength:
+  Max: 125
+
+Metrics/CyclomaticComplexity:
+  Max: 6
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ModuleLength:
+  Max: 125
+
+Metrics/PerceivedComplexity:
+  Max: 7
+
+Naming/ClassAndModuleCamelCase:
+  Exclude:
+    - 'app/**/v1_5/*.rb'
+    - 'app/**/v1_5.rb'
+    - 'app/**/v2_3.rb'
+    - 'app/**/v2_3/*.rb'
+    - 'spec/**/v1_5/*.rb'
+    - 'spec/**/v2_3/*.rb'
+
+Rails/DynamicFindBy:
+  Whitelist:
+    - find_by_friendly_id
+
+Rails/FilePath:
+  EnforcedStyle: arguments
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Rails/HasManyOrHasOneDependent:
+  Enabled: false
+
+Rails/HttpPositionalArguments:
+  Enabled: false
+
+Rails/InverseOf:
+  Enabled: false
+
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
+Rails/PluckInWhere:
+  EnforcedStyle: aggressive
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - pre
+    - stg
+    - demo
+
+RSpec:
+  Enabled: false
+
+RSpec/BeforeAfterAll:
+  Enabled: true
+
+Style/AndOr:
+  EnforcedStyle: always
+
+Style/Documentation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  SafeAutoCorrect: true
+
+Style/FormatStringToken:
+  Enabled: false
+
+Style/MixinGrouping:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%':  ()
+    '%i': ()
+    '%q': ()
+    '%Q': ()
+    '%r': '{}'
+    '%s': ()
+    '%w': ()
+    '%W': ()
+    '%x': ()
+
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+Style/SignalException:
+  EnforcedStyle: semantic
+
+Style/SingleLineBlockParams:
+  Enabled: true
+  Methods:
+    - reduce:
+        - a
+        - e
+    - inject:
+        - a
+        - e
+
+Style/WordArray:
+  MinSize: 0
+  WordRegex: !ruby/regexp '/\A[\p{Word}]+\z/'
+
+Style/SymbolArray:
+  Enabled: false

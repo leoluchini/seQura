@@ -1,0 +1,4 @@
+:schedule:
+  ProcessOrderJob:
+    enabled: true
+    cron: '* * 7 * * 1'   # Runs every monday at 7 am
